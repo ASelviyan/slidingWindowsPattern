@@ -39,7 +39,7 @@ function maxSubArraySumRefactored(arr, n) {
         return null
     }
 
-    //this for loop create the initial maxSum be adding up the first "n" numbers in the array
+    //this for loop creates the initial maxSum. So it takes the first "n" numbers in the array and add them up.
     for (let i = 0; i < n; i++) {
         maxSum += arr[i]
     }
@@ -47,7 +47,7 @@ function maxSubArraySumRefactored(arr, n) {
     //then it takes the initial maxSum and puts it into temp sum
     tempSum = maxSum
 
-    //this for loop starts "n" numbers in the array and then add the next index in the array to tempSum and subtracts the first index.
+    //this for loop starts "n" numbers in the array and then add the next index in the array to tempSum and subtracts the first "n'th" index.
     //for example i starts at index 3 which is 2 and then takes the temp variable which is 17 and takes the arr[i - num] index away from it so 17 - 2 = 15 and then add the next index in the array to the tempSum so 15 + 3 = 18. keeps doing that until it gets to the end of the array.
     for(let i = n; i < arr.length; i++){
         //here we take tempSum then subtract the number before the i and then add the next number after "n" numbers 
